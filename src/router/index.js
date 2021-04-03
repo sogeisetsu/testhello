@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import First from "@/views/first.vue"
+import Two from "@/views/two.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,8 +21,12 @@ const routes = [
   },
   {
     path:"/first",
-    name:First,
+    name:"First",
     component:First
+  },{
+    path:"/two",
+    name:"Two",
+    component:Two
   }
 ]
 
