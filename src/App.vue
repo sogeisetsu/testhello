@@ -5,10 +5,20 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/first">first</router-link>
     </div> -->
-    <h1>VUE</h1>
+    <h1>{{msg}}</h1>
     <router-view/>
   </div>
 </template>
+<script>
+
+export default {
+  data:function(){
+    return{
+      msg:"HELLO WORLD"
+    }
+  }
+}
+</script>
 
 <style>
 #app {

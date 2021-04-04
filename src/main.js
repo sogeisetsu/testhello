@@ -6,7 +6,7 @@ import axios from "axios"
 Vue.config.productionTip = false
 // 将axios加入全局的作用域
 Vue.prototype.$axios=axios
-new Vue({
+new Vue({ // eslint-disable-line no-unused-vars
   // 配置路由
   router,
   // 将App.vue 渲染进去

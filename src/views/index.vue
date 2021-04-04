@@ -9,3 +9,12 @@
 		<router-view></router-view>
 	</div>
 </template>
+<script>
+export default {
+    name:"index",
+    mounted:function(){
+        this.$parent.msg="home"
+        console.log(this.$root);
+    }
+}
+</script>
