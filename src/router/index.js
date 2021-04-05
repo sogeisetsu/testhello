@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import First from "@/views/user.vue"
+import User from "@/views/User.vue"
 import Two from "@/views/two.vue"
-import Index from "@/views/index.vue"
-import About from "@/views/shoppingcart.vue"
+import Index from "@/views/Index.vue"
+import Shoppingcart from "@/views/Shoppingcart.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,11 +32,11 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-        component: About
+        component: Shoppingcart
       }, {
         path: "user",
         name: "User",
-        component: First
+        component: User
       }
     ]
   }
