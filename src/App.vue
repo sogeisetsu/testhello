@@ -1,44 +1,50 @@
 <template>
-  <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/first">first</router-link>
-    </div> -->
-    <h1>{{msg}}</h1>
-    <router-view/>
-  </div>
+	<div id="app">
+		<mu-appbar style="width: 100%" :title="msg" class="header" color="blueGrey100" textColor="grey900"></mu-appbar>
+
+		<router-view />
+
+	</div>
 </template>
 <script>
-
 export default {
-  data:function(){
-    return{
-      msg:"HELLO WORLD"
-    }
-  }
+	data: function () {
+		return {
+			msg: 'HELLO WORLD',
+		}
+	},
 }
 </script>
 
 <style>
+@import 'assets/css/icon.css';
+@import 'assets/css/Roboto.css';
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+	font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	min-height: 100%;
 
-#nav {
-  padding: 30px;
-}
+	height: auto !important;
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+	width: 100%;
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+	height: 100%; /*IE6不识别min-height*/
+
+	position: relative;
+	/* margin: 0; */
+}
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+	height: 56px !important;
 }
 </style>
