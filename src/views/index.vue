@@ -1,6 +1,12 @@
 <template>
 	<div id="page">
-		<mu-button color="secondary">Material Design按钮</mu-button>
+		<div class="notice" v-show="ifshownotice" @close="closenotice">
+			<van-notice-bar
+				:text="topnotice"
+				left-icon="volume-o"
+				mode="closeable"
+			/>
+		</div>
 		<router-view></router-view>
 		<div id="footer">
 			<mu-bottom-nav shift :value.sync="shift" @change="changetab">
@@ -9,18 +15,21 @@
 					icon="home"
 					to="home"
 					value="home"
+					replace
 				></mu-bottom-nav-item>
 				<mu-bottom-nav-item
 					title="购物车"
 					icon="shopping_cart"
 					to="about"
 					value="cart"
+					replace
 				></mu-bottom-nav-item>
 				<mu-bottom-nav-item
 					title="我的"
 					icon="person"
 					to="first"
 					value="user"
+					replace
 				></mu-bottom-nav-item>
 			</mu-bottom-nav>
 		</div>
@@ -32,6 +41,8 @@ export default {
 	data: function () {
 		return {
 			shift: 'home',
+			ifshownotice: true,
+			topnotice: '学而时习之，不亦说乎；有朋自远方来不亦乐乎？人不知而不愠，不亦君子乎？',
 		}
 	},
 	mounted: function () {
@@ -61,34 +72,32 @@ export default {
 			// console.log(value)
 			if (value == 'home') {
 				this.$parent.msg = '首页'
-			}else if(value=="cart"){
-				this.$parent.msg="购物车"
-			}else if(value=="user"){
-				this.$parent.msg="我的"
-			}else{
-				this.$parent.msg="高校团购联盟"
+			} else if (value == 'cart') {
+				this.$parent.msg = '购物车'
+			} else if (value == 'user') {
+				this.$parent.msg = '我的'
+			} else {
+				this.$parent.msg = '高校团购联盟'
 			}
 		},
+		closenotice:function(){
+			this.ifshownotice=false
+		}
 	},
 }
 </script>
 
 <style scoped>
 #page {
-	padding-bottom: 56px;
+	padding-bottom: 60px;
 	padding-top: 66px;
+	/* height: 100%; */
+	/* min-height: 100%; */
+	/* background-color: antiquewhite; */
 }
-#nav {
-	padding: 30px;
-}
-
-#nav a {
-	font-weight: bold;
-	color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-	color: #42b983;
+.notice {
+	margin-top: -4px;
+	margin-bottom: 5px;
 }
 #footer {
 	position: fixed;

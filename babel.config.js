@@ -7,11 +7,11 @@ module.exports = {
       "libraryName": "muse-ui",
       "libraryDirectory": "lib",
       "camel2DashComponentName": false
-    }],
-    ['import', {
-      libraryName: 'vant',
-      libraryDirectory: 'es',
-      style: true
-    }, 'vant']
+    }]
+    // ['import', {
+    //   libraryName: 'vant',
+    //   libraryDirectory: 'es',
+    //   style: true
+    // }, 'vant']
   ]
 }
