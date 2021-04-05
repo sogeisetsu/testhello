@@ -20,14 +20,14 @@
 				<mu-bottom-nav-item
 					title="购物车"
 					icon="shopping_cart"
-					to="about"
+					to="shoppingcart"
 					value="cart"
 					replace
 				></mu-bottom-nav-item>
 				<mu-bottom-nav-item
 					title="我的"
 					icon="person"
-					to="first"
+					to="user"
 					value="user"
 					replace
 				></mu-bottom-nav-item>
@@ -53,11 +53,11 @@ export default {
 			this.shift = 'home'
 			this.$parent.msg = '首页'
 			// console.log(this.$route.path)
-		} else if (this.$route.path == '/first') {
+		} else if (this.$route.path == '/user') {
 			this.shift = 'user'
 			this.$parent.msg = '我的'
 			// console.log(this.$route.path)
-		} else if (this.$route.path == '/about') {
+		} else if (this.$route.path == '/shoppingcart') {
 			this.$parent.msg = '购物车'
 			this.shift = 'cart'
 			// console.log(this.$route.path)
