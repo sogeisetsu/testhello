@@ -8,6 +8,9 @@ import 'muse-ui/lib/styles/theme.less';
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import Helpers from 'muse-ui/lib/Helpers';
+import { Toast } from 'vant';
+
+Vue.use(Toast);
 
 Vue.use(Vant)
 
