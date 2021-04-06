@@ -2,11 +2,23 @@
 	<div id="app">
 		<mu-appbar
 			style="width: 100%"
-			:title="msg"
 			class="header"
+			:title="msg"
 			color="blueGrey100"
 			textColor="grey900"
-		></mu-appbar>
+		>
+			<mu-button
+				icon
+				slot="left"
+				v-show="ifshowback"
+				@click="$router.back(-1)"
+			>
+				<mu-icon value="arrow_back_ios"></mu-icon>
+			</mu-button>
+			<mu-button icon slot="right" disabled v-show="ifshowback">
+				<!-- <mu-icon value="menu"></mu-icon> -->
+			</mu-button>
+		</mu-appbar>
 
 		<router-view />
 	</div>
@@ -16,6 +28,7 @@ export default {
 	data: function () {
 		return {
 			msg: 'HELLO WORLD',
+			ifshowback: false,
 		}
 	},
 }
@@ -41,11 +54,7 @@ body {
 	color: #2c3e50;
 	min-height: 100%;
 
-	/* height: auto !important; */
-
 	width: 100%;
-
-	height: 100%; /*IE6不识别min-height*/
 
 	position: relative;
 	background-color: #e9eef3;
@@ -57,9 +66,9 @@ body {
 	top: 0;
 	height: 56px !important;
 	.mu-appbar-title {
-		font-family: Roboto, 'Noto Serif SC', 'Long Cang', 'Noto Sans SC',
-			Avenir, Helvetica, Arial, sans-serif;
-		font-size: 30px !important;
+		font-family: Roboto, 'Noto Sans SC', Avenir, Helvetica, Arial,
+			sans-serif;
+		font-size: 20px !important;
 		font-weight: 200;
 	}
 }

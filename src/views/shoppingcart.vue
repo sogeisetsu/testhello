@@ -136,9 +136,6 @@ export default {
 				document.getElementsByClassName('goodsbox')[0].remove()
 			}
 		},
-		sleep(d) {
-			for (var t = Date.now(); Date.now() - t <= d; );
-		},
 		gettotalprice: function () {
 			let total = 0
 			this.checkedcars = {}
@@ -158,13 +155,13 @@ export default {
 			return this.gettotalprice()
 		},
 	},
-	watch: {}
+	watch: {},
 }
 </script>
 
-<style  lang="less">
+<style  lang="less" scoped>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-.left-side {
+/deep/ .left-side {
 	margin-left: 10px;
 }
 .mainshoppingcar {
@@ -184,32 +181,34 @@ export default {
 	margin-bottom: 10px;
 	border: 1px solid rgba(68, 196, 192, 0.353);
 	border-radius: 5px;
-	box-shadow: 0 2px 12px 0 rgba(18, 77, 90, 0.483);
+	box-shadow: 3px 2px 12px 0px rgb(18 77 90 / 48%);
 }
-.van-card__title {
+/deep/ .van-card__title {
 	font-weight: bold;
 }
-.van-checkbox {
+/deep/ .van-checkbox {
 	background-color: #fafafa;
 }
 
-.van-checkbox__icon {
+/deep/.van-checkbox__icon {
 	margin-left: 6px;
 }
-.van-card {
+/deep/.van-card {
 	padding-left: 3px !important ;
 }
-.van-checkbox__label {
+/deep/.van-checkbox__label {
 	width: 95%;
-	margin-left: 1px;
+	margin-left: 1px !important;
 	color: #323233;
 	line-height: 20px;
 }
-.delete-button {
+/deep/.delete-button {
 	height: 100% !important;
 }
-.van-submit-bar {
+/deep/.van-submit-bar {
 	margin-bottom: 56px;
 	background-color: #e0f7fa !important;
 }
 </style>
+
+

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import axios from "axios"
 import 'muse-ui/lib/styles/base.less';
-import { Button, BottomNav, AppBar, Grid } from 'muse-ui';
+import { Button, BottomNav, AppBar, Grid ,Icon} from 'muse-ui';
 import 'muse-ui/lib/styles/theme.less';
 import Vant from 'vant';
 import 'vant/lib/index.css';
@@ -19,6 +19,7 @@ Vue.use(BottomNav)
 Vue.use(AppBar)
 Vue.use(Grid)
 Vue.use(Helpers);
+Vue.use(Icon)
 
 // 阻止启动生产消息
 Vue.config.productionTip = false

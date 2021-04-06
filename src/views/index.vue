@@ -5,7 +5,8 @@
 				:text="topnotice"
 				left-icon="volume-o"
 				mode="closeable"
-			/>
+			>
+			</van-notice-bar>
 		</div>
 		<router-view></router-view>
 		<div id="footer">
@@ -42,13 +43,16 @@ export default {
 		return {
 			shift: 'home',
 			ifshownotice: true,
-			topnotice: '学而时习之，不亦说乎；有朋自远方来不亦乐乎？人不知而不愠，不亦君子乎？',
+			topnotice:
+				'学而时习之，不亦说乎；有朋自远方来不亦乐乎？人不知而不愠，不亦君子乎？',
 		}
 	},
 	mounted: function () {
 		// this.$parent.msg = 'home'
-		console.log(this.$root)
+		// console.log(this.$root)
 		// console.log(this.$route.path)
+		this.$parent.ifshowback = false
+
 		if (this.$route.path == '/home') {
 			this.shift = 'home'
 			this.$parent.msg = '首页'
@@ -80,9 +84,9 @@ export default {
 				this.$parent.msg = '高校团购联盟'
 			}
 		},
-		closenotice:function(){
-			this.ifshownotice=false
-		}
+		closenotice: function () {
+			this.ifshownotice = false
+		},
 	},
 }
 </script>

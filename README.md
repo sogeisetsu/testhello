@@ -39,7 +39,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 found in`的解决方法
 + 报错`vue this.getOptions is not a function     at Object.lessLoader`
 [解决方法](https://www.cnblogs.com/webdragon/p/14361754.html)
-
+vue cli computed修改data会被报错`vue/no-side-effects-in-computed-properties`
 ## 收藏夹
 
 ### 前端
