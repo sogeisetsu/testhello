@@ -64,7 +64,7 @@ body {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	height: 56px !important;
+	height: 45px !important;
 	.mu-appbar-title {
 		font-family: Roboto, 'Noto Sans SC', Avenir, Helvetica, Arial,
 			sans-serif;

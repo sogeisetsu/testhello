@@ -38,7 +38,7 @@
 					</template>
 				</div>
 			</van-action-sheet>
-			<van-tabs v-model="active" scrollspy sticky class="v-tabs" offset-top="56px">
+			<van-tabs v-model="active" scrollspy sticky class="v-tabs" offset-top="45px">
 				<van-tab title="水果" class="v-tab">
 					<div class="ceshi">
 						<div
@@ -336,7 +336,7 @@ export default {
 
 <style scoped lang="less">
 #goods {
-	padding-top: 56px;
+	padding-top: 45px;
 }
 .main {
 	text-align: left !important;

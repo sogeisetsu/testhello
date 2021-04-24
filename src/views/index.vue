@@ -94,7 +94,7 @@ export default {
 <style scoped>
 #page {
 	padding-bottom: 60px;
-	padding-top: 66px;
+	padding-top: 55px;
 	/* height: 100%; */
 	/* min-height: 100%; */
 	/* background-color: antiquewhite; */
