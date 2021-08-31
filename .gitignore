@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 
-
+# 历史文件
+/.history
 # local env files
 .env.local
 .env.*.local
