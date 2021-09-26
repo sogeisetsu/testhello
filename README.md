@@ -1,4 +1,13 @@
 # testhello
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![GitHub Repo stars](https://img.shields.io/github/stars/sogeisetsu/testhello)](https://github.com/sogeisetsu/testhello)
+[![GitHub](https://img.shields.io/github/license/sogeisetsu/testhello?style=plastic)](https://github.com/sogeisetsu/testhello/blob/master/LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/sogeisetsu/testhello?logo=vuedotjs&style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/sogeisetsu/testhello?logo=github&style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/sogeisetsu/testhello)
+![language: English (shields.io)](https://img.shields.io/badge/language-English-yellow)
+![Platform: Electron (shields.io)](https://img.shields.io/badge/platform-Electron-yellow?style=social&logo=electron)
+![Author: 苏月晟 (shields.io)](https://img.shields.io/badge/Author-苏月晟-orange)
 
 ## Project setup
 ```
